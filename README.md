@@ -11,3 +11,9 @@ Soy un agricultor que tiene varias parcelas de olivar situadas en distintos luga
 
 No obstante como las características y condiciones de cada parcela son diferentes y además algunas cambian con el tiempo, resulta difícil planificar correctamente cuándo necesita atención cada una para las distintas labores de mantenimiento.
 
+
+## Documentación
+
+- [Configuración del repositorio](docs/configuracion.md)
+
+
