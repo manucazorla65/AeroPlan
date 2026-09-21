@@ -1,22 +1,20 @@
-# OleoGest
-Gestión y analisis de parcelas de olivas.
+# AeroPlan
 
+Planificación y análisis de operaciones con drones.
 
 ## Cliente
-
 ![Tarjeta de cliente del juego de rol](img/cliente.png)
 
 ## Problema
-Soy un agricultor que tiene varias parcelas de olivar situadas en distintos lugares. Cada parcela tiene características y condiciones diferentes, como el clima de su localización, la humedad del ambiente, el tipo de suelo, la edad del olivar o la variedad de aceituna.
+Soy piloto de drones y realizo trabajos en diferentes localizaciones. Antes de desplazarme para realizar un vuelo necesito conocer las condiciones de la zona, ya que tanto la meteorología como las restricciones del espacio aéreo pueden variar dependiendo del lugar y del momento.
 
-Como estas características y condiciones son diferentes y algunas cambian con el tiempo, resulta difícil analizar conjuntamente toda esta información para determinar las necesidades de cada parcela. Es necesario tener en cuenta y calcular a partir de distintos factores cuándo necesita atención cada una para las diferentes labores de mantenimiento.
-
+El problema es que esta información se encuentra repartida entre distintas fuentes y puede cambiar con el tiempo, por lo que resulta complicado analizarla de forma conjunta. Para poder planificar correctamente un trabajo es necesario analizar y validar las condiciones de cada zona, teniendo en cuenta factores como el viento, la lluvia o las restricciones existentes, y así poder filtrar aquellos lugares o franjas horarias en los que las condiciones no sean adecuadas.
 
 ## Documentación
 - [Configuración del repositorio](docs/configuracion.md)
 
 
 ## Referencias
-- [Suelo, Riego, Nutrición y Medio Ambiente del Olivar](https://www.juntadeandalucia.es/servicios/publicaciones/detalle/78275.html)
-- [Recomendaciones de riego en olivar](https://www.juntadeandalucia.es/agriculturaypesca/ifapa/servifapa/registro-servifapa/7257cf50-7f90-4212-b8e8-adbf02e922c2/)
-- [Producción integrada del olivar](https://www.juntadeandalucia.es/organismos/agriculturapescaaguaydesarrollorural/areas/agricultura/sanidad-vegetal/paginas/produccion-integrada-regl-oli.html)
+- [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/productosAEMET)
+- [Zonas geográficas UAS - AESA](https://www.seguridadaerea.gob.es/es/node/1529)
+- [Servicio de datos AIS para zonas geográficas UAS - ENAIRE](https://aip.enaire.es/recursos/descargas/ZGUAS/servAIS_APIDOC.pdf)
