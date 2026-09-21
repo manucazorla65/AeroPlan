@@ -1,2 +1,2 @@
-# OleoGest
-Gestión y analisis de parcelas de olivas.
+# AeroPlan
+Planificación y análisis de operaciones con drones.
