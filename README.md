@@ -6,13 +6,19 @@ Planificación y análisis de operaciones con drones.
 ![Tarjeta de cliente del juego de rol](img/cliente.png)
 
 ## Problema
-Soy piloto de drones y realizo trabajos en diferentes localizaciones. Antes de desplazarme para realizar un vuelo necesito conocer las condiciones de la zona, ya que tanto la meteorología como las restricciones del espacio aéreo pueden variar dependiendo del lugar y del momento.
+Soy piloto de drones y realizo trabajos de fotografía y vídeo aéreo de exteriores en diferentes localizaciones.
 
-El problema es que esta información se encuentra repartida entre distintas fuentes y puede cambiar con el tiempo, por lo que resulta complicado analizarla de forma conjunta. Para poder planificar correctamente un trabajo es necesario analizar y validar las condiciones de cada zona, teniendo en cuenta factores como el viento, la lluvia o las restricciones existentes, y así poder filtrar aquellos lugares o franjas horarias en los que las condiciones no sean adecuadas.
+Cuando tengo que realizar un trabajo en una zona determinada, las condiciones pueden cambiar considerablemente dependiendo del momento del día. Factores como el viento, la lluvia, la visibilidad, las condiciones de luz o las posibles restricciones existentes en la zona pueden hacer que unas franjas horarias sean más adecuadas que otras para realizar el vuelo y obtener el resultado fotográfico esperado.
+
+El problema es que resulta complicado analizar conjuntamente todos estos factores para elegir el momento más adecuado para realizar el trabajo. No se trata únicamente de obtener una respuesta de si/no sobre si se puede realizar el vuelo, sino de poder comparar diferentes franjas horarias dentro de una misma localización según el grado en el que sus condiciones son adecuadas.
+
+Para poder planificar correctamente el trabajo es necesario analizar y validar las condiciones de cada franja, filtrar aquellas que no sean adecuadas y comparar las restantes para determinar cuáles presentan unas condiciones más favorables para realizar la  fotografía o vídeo aéreo.
+
+### Enfoque del problema (las fotografías en las que se centra)
+El problema se centra en trabajos de fotografía y vídeo aéreo de exteriores realizados con drones, tanto de propiedades privadas como casas, chalets, apartamentos..., como de monumentos propios de municipios (el trabajo seria contratado por el ayuntamiento). La localización del trabajo ya está determinada previamente, por lo que el objetivo no es buscar lugares donde volar, sino analizar las distintas franjas horarias disponibles en esa zona y determinar cuáles presentan unas condiciones más adecuadas para realizar el trabajo.
 
 ## Documentación
 - [Configuración del repositorio](docs/configuracion.md)
-
 
 ## Referencias
 - [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/productosAEMET)
