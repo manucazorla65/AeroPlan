@@ -16,7 +16,7 @@ Esto puede provocar un gasto innecesario de recursos para la empresa, como combu
 Por tanto, existe la necesidad de disponer previamente de información suficientemente precisa sobre las condiciones que pueden afectar a una operación en una localización determinada.
 
 ## Objetivo
-Analizar conjuntamente todos estos factores para elegir el momento más adecuado para realizar el trabajo, de manera "objetiva y cuantificable" necesitando un procesamiento previo de los datos. Ya que no se trata únicamente de obtener una respuesta de si/no sobre si se puede realizar el vuelo, sino de encotrar el mejor momento (dia/hora) para llevar a cabo este trabajo, y de hacerlo de la manera más rápida y óptima posible.
+Analizar conjuntamente todos estos factores para elegir el momento más adecuado para realizar el trabajo, y calcular de manera "objetiva" que horario (puede varíar el dia o unicamente la hora) es el mejor para el que el trabajo pueda realizarse de la manera más rápida y óptima posible.
 
 ## Datos y aproximación del problema
 Para poder estudiar el problema es necesario disponer de información que permita conocer las condiciones existentes en el lugar en el que se va a realizar el trabajo. En este caso, los datos más relevantes se pueden dividir en dos tipos, los que refieren a información meteorológica, y los que lo hacen con información relativa a las zonas geográficas UAS.
