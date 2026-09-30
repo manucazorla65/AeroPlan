@@ -11,4 +11,3 @@ Como piloto de drones que ya sabe que la zona es volable, no tengo forma de valo
 ## [HU003] No sé qué franja es la mejor dentro de mi margen de fechas
 
 Como piloto de drones que dispone de dos o tres días para organizar un trabajo, no tengo forma de saber qué franja horaria es la más adecuada (según el tipo de trabajo contratado) para llevar a cabo el tranajo, porque la luz y las condiciones cambian a lo largo del día. Hoy decido por intuición, por lo que a veces tengo que esperar en el lugar a que mejoren la luz, las nubes o el tiempo.
-
