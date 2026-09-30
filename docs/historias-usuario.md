@@ -4,10 +4,17 @@
 
 Como piloto de drones que recibe un encargo en una localización de otra población, no tengo forma de saber con certeza si en esa zona puedo volar con mi licencia ni hasta qué altura puedo hacerlo. Hoy interpreto a mano las zoas UAS y a veces me equivoco, por lo que gasto entre 1h-3h en desplazamiento para luego encontrarme con que no puedo hacer el trabajo.
 
+**Jornada relacionada:** [Jornada de Manuel](user-journeys.md).
+
 ## [HU002] No sé si el tiempo permite volar y grabar con calidad
 
 Como piloto de drones que ya sabe que la zona es volable, no tengo forma de valorar de manera fiable si la metereología de los días previstos permite que pueda volar el dron, y ademas que tenga una imagen de calidad, ya que no todo pesa igual, por ejemplo el viento, las rachas y la lluevia afectan mucho más que la niebla o la luz. Hoy reviso todos estos datos en la AEMET, pero debido a la complejidad que sto conlleva, solo miro si llueve, por lo que puedo luego llegar al lugar, y encontrarme con condiciones que hacen imposible el trabajo.
 
+**Jornada relacionada:** [Jornada de Manuel](user-journeys.md).
+
+
 ## [HU003] No sé qué franja es la mejor dentro de mi margen de fechas
 
 Como piloto de drones que dispone de dos o tres días para organizar un trabajo, no tengo forma de saber qué franja horaria es la más adecuada (según el tipo de trabajo contratado) para llevar a cabo el tranajo, porque la luz y las condiciones cambian a lo largo del día. Hoy decido por intuición, por lo que a veces tengo que esperar en el lugar a que mejoren la luz, las nubes o el tiempo.
+
+**Jornada relacionada:** [Jornada de Manuel](user-journeys.md).
