@@ -2,7 +2,7 @@
 
 ## [HU001] No sé si puedo volar en la zona del encargo
 
-Como piloto de drones que recibe un encargo en una localización de otra población, no tengo forma de saber con certeza si en esa zona puedo volar con mi licencia ni hasta qué altura puedo hacerlo. Hoy interpreto a mano las zonas UAS de ENAIRE y a veces me equivoco, por lo que gasto entre 1h-3h en desplazamiento para luego encontrarme con que no puedo hacer el trabajo.
+Como piloto de drones que recibe un encargo en una localización de otra población, no tengo forma de saber con certeza si en esa zona puedo volar, ni hasta qué altura puedo hacerlo. Hoy interpreto a mano las zonas UAS de ENAIRE y a veces me equivoco, por lo que gasto entre 1h-3h en desplazamiento para luego encontrarme con que no puedo hacer el trabajo.
 
 **Jornada relacionada:** [Jornada de Manuel](user-journeys.md).
 
