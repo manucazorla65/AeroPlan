@@ -1,19 +1,17 @@
 # Milestones
 
-## Milestone 0: Modelo inicial del problema
+## Milestone 0: Primera base interna sobre la HU001
 
-Es el primer producto interno de AeroPlan y parte únicamente de la HU001, relacionada con el problema de poder volar en la zona de un encargo.
+En el milestone 0, se trabajará unicamente sobre el problema planteado en la HU001, todavía sin incorporar la lógica de negocio.
 
-El resultado sera una primera base de código interna de AeroPLan, todavia sin llegar a incorporar la lógica del resultado de una operación.
+Para hacerlo se partirá de la historia de usuario HU001 y se abrirán issues para aquellos aspectos del problema que sean necesarios analizar antes de implementarlos en código. De este modo, cada issue tiene que justificar de que parte de la HU001 procede y deberá razonarse antes de realizar el cambio correspondiente.
 
-Para esta primera versión, se partirá de los problemas que se han comentado en la HU001 y se trabajrá sobre ellos mediante issues. Cada issue planterá un problema concreto (no de programación) y en el se razonará que parte del problema es necesario representar y cómo encaja con lo desarrollado anteriormente.
-
-El milestone se considerará completado cuando sea posible relacionar cada elemento incorporado al código con un issue de la HU001 y entender por que no ha sido necesario incluirlo. No deberá de exisitir ningún elemento cuya presencia no pueda justificarse a partir de ese proceso.
+El milestone será válido si puede seguirse el proceso desde la HU001 hasta los issues y de la misma manera desde estos hasta los cambios realizados en el código, evitando poner elementos que no estén justificados por dicho proceso.
 
 ## Milestone 1: Lógica y pruebas
 
-Es el segundo producto interno de AeroPlan y parte de lo que se entregue en el milestone anterior.
+En el milestone 1, se continua trabajando sobre el mismo problema de la HU001, pero ya incorporando lógica de negocio sobre lo que se ha obtenido en el milestone anterior.
 
-Se entrega la lógica que resuelve el problema planteado en la HU001. Los problemas de lógica relacionados con esta historia se dividirán en issues más pequeños. Para cada uno se implementará el comportamiento que tienen que tener y se crearán pruebas que permitan comprobarlo.
+Las cuestiones de lógica que sean necesarias abordar se planterán previamente mediante issues. A partir de ellos se implementará el comportamiento correspondiente junto con los test automáticos para comprobarlo.
 
-El milestone se considerará completado cuando las pruebas se ejecuten automáticamente y pasen. Cada prueba además debera de comprobar un comportamiento asociado a alguno de los problemas planteados en los issues de la HU001.
+El milestone será válido cuando las pruebas puedan ejecutarse automáticamente, se superen de manera correcta y pueda comprobarse que estan relacionados con issues procedentes de la historia de usuario HU001.
