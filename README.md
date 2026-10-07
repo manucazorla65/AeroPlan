@@ -40,5 +40,5 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 ## Planificación
 - [Personas](docs/personas.md)
 - [Jornadas de usuario](docs/user-journeys.md)
-- [Historias de usuario](docs/Historias-usuario.md)
-- [Milestones](docs/Milestones.md)
+- [Historias de usuario](docs/historias-usuario.md)
+- [Milestones](docs/milestones.md)
