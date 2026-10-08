@@ -1,4 +1,4 @@
-# Jornada de usuario
+# Viajes de usuario
 
 ## Manuel decide si y cuándo viajar a un trabajo
 
