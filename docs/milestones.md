@@ -1,12 +1,10 @@
 # Milestones
 
-## Milestone 0: Primera base interna sobre la HU001
+## Milestone 0: Análisis inicial
 
-En el milestone 0, se trabajará unicamente sobre el problema planteado en la HU001, todavía sin incorporar la lógica de negocio.
+En el milestone 0, trabajaremos únicamente sobre el problema de la hisotria de usuario HU001, usando la metolodía DDD, pero todavia sin incluir logia de negocio.
 
-Para hacerlo se partirá de la historia de usuario HU001 y se abrirán issues para aquellos aspectos del problema que sean necesarios analizar antes de implementarlos en código. De este modo, cada issue tiene que justificar de que parte de la HU001 procede y deberá razonarse antes de realizar el cambio correspondiente.
-
-El milestone será válido si puede seguirse el proceso desde la HU001 hasta los issues y de la misma manera desde estos hasta los cambios realizados en el código, evitando poner elementos que no estén justificados por dicho proceso.
+El milestone será válido si cada issue que se abra sirva para solucionar un problema concreto derivado de la HU001, de manera que el problema de la HU001 este representado con sus propios issues, si las modificaciones de código están conectadas al issue que queremos resolver y si cada commit trata sobre un único issue.
 
 ## Milestone 1: Lógica y pruebas
 

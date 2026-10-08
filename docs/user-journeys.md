@@ -7,5 +7,4 @@ Caza vez que un cliente le encarga un trabajo de fotografía o vídeo aéreo, Ma
 AeroPlan comprueba primero las zonas UAS de ENAIRE en esa localización y le dice si puede volar con la licencia y hasta qué altura. Después complementa ese resultado con la previsión de AEMET para esos días, dando más peso al viento, las rachas y la lluvia que a otros factoroes como la niebla o la luz, y le devuelve las franjas horarias mas óptimas. Manuel ve que el martes por la mañana hay rachas fuertes, mientras que el miércoles a media mañana las condiciones son buenas, y elige esa franja horaria.
 
 Antes tenía que consultar ENAIRE y AEMET por separado, interpretarlas a mano, y a veces, comprobar solo si llovia. Ahora, en pocos minutos confirma el encargo con el cliente con una fecha y una hora respaldadas por datos, y evita desplazarse para encontrase un vuelo imposible.
-Con la decisión tomada, cierra la aplicación.
 
