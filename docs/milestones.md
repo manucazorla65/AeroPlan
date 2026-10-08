@@ -5,7 +5,7 @@
 En el milestone 0, trabajaremos únicamente sobre el problema de la hisotria de usuario HU001, usando la metolodía DDD.
 
 
-El milestone será válido si, al revisar los issues derivados de la HU001, puede comprobarse que se ha seguido la metodología DDD para analizar el problema antes de llevarlo al código.
+El milestone será válido si cogemos el ejemplo real que viene en la HU001 y somos capaces de representarlo directamente en nuestro código.
 
 ## Milestone 1: Lógica y pruebas
 
