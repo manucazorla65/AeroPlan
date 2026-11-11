@@ -1,0 +1,6 @@
+lenguaje: go
+entidad: internal/aeroplan/encargo.go
+
+automatizar:
+  fichero: Makefile
+  orden: make
