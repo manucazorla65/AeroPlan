@@ -45,3 +45,13 @@ Para comparar uno a uno los resultados, he hecho una tabla de manera que me perm
 | Task | 60,0 ms ± 2,4 ms | 50 MB | 7 | 64 B |![Medición de Task 1](img/automatizacion/task1.png)[Medición de Task 2](img/automatizacion/task2.png)
 | Mage | 78,3 ms ± 1,8 ms | 5,8 MB | 16 | 195 B |![Medición de Mage](img/automatizacion/mage.png)
 | Just | 16,8 ms ± 0,9 ms | 6,3 MB | 2 | 26 B |![Medición de Just](img/automatizacion/just.png)
+
+## Elección final
+
+Después de haber hecho las pruebas he elegido GNU Make como herrmienta para automatizar las tareas del proyecto, ya que ha presentado un tiempo de ejecución similar al de ejecutar directamente la operación de Go y su ejecutable ocupa solo 256KB para este caso.
+
+Just también ha tenido un tiempo de ejecución similar y necesita una configuración menor, sin embargo este necesita introducir herramientas adiconales de 6,3 MB para cubrir las mismas necesidades del proyecto (Acutales).
+
+Task y Mage ofrecen funcionaliadesd adicionales que pueden ser útiles en sistemas de automatización mas complejos, pero en las preubas que he realizado, han marcado mas tiempo de ejecución y una configuración superior a la que considero que se necesita par ael proyecto.
+
+Las operaciones que se necesitan automatizar en esta fase son principalmente la instalación de dependencias, la comprobación de los fuentes y la ejecución de test. Esto ha hecho que me haya costado decidirme entre Just y Make, aunque finalmente haya escogido Make ya que permite cubrir estas cosas, sin añadir complejidad.
