@@ -42,3 +42,25 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 - [Jornadas de usuario](docs/user-journeys.md)
 - [Historias de usuario](docs/historias-usuario.md)
 - [Milestones](docs/milestones.md)
+
+## Automatización de tareas
+
+Las tareas del proyecto se automatizan mediante GNU Make.
+
+Para instalar las dependencias:
+
+```bash
+make install
+```
+
+Para comprobar que los fuentes compilan correctamente:
+
+```bash
+make check
+```
+
+Para ejecutar los tests:
+
+```bash
+make test
+```
