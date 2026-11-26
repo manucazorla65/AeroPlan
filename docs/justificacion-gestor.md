@@ -1,57 +1,26 @@
+# Gestor de dependencias
+
+Go incluye su propio gestor de dependencias, los módulos (`go mod`), desde la versión 1.11, y desde la versión 1.16 es el modo que se usa por defecto. 
+
 # Elección del gestor de tareas
-## Contexto
-
-AeroPlan necesita automatizar las operaciones repetitivas necesarias durante el desarrollo del proyecto. Entre ellas se encuentran la instalación de dependencias, la comprobación de los fuentes y la ejecución de las pruebas.
-
-Go dispone de su propio sistema de gestión de dependencias mediante módulos, por lo que la comparación realizada se centra en la herramienta utilizada para automatizar las tareas del proyecto.
-
 ## Alternativas consideradas
 
 He analizado las siguientes herramientas, que son las que he encontrado que se repetian mas en los foros de reddit:
 
-- GNU Make
-- Task
-- Mage
-- Just
+- GNU Make: las tareas se definen en el `Makefile`
+- Eobo: las tareas se definen en un fichero YAML `robo.yml`
+- xc: las tareas se definen en bloques de código dentro de un fichero Markdown
+- goyek: las tareas se definen como código eGo dentro del propio proyecto
 
 ## Criterios
 
-Para evitar basar mi elección únicamente en popularidad o en preferencias personales, he considerado criterios relacionados directamente con el proyecto:
+He considerado únicamente criterios que se pueden medir sobre el propio proyecto:
 
-- Taempo necesario para ejecutar la tarea `check`;
-- Tamaño de la herramienta instalada;
-- Tamaño y número de líneas necesarias para definir la tarea;
-- Necesidad de instalar herramientas adicionales;
-- Posibilidad de definir dependencias entre tareas;
-- Capacidad de ejecución paralela;
-- Mantenimiento actual de la herramienta;
-- Adecuación a las necesidades actuales de AeroPlan.
+- Tiempo necesario para ejecutar la tarea `check`.
+- Sobrecarga que añade la herramienta respecto a ejecutar `go build ./...` directamente.
+- Tamaño de la herramienta instalada.
+- Software adicional que hay que instalar para poder usarla.
+- Dependencias que añade al proyecto.
+- Número de líneas necesarias para definir la tarea `check`.
+- Mantenimiento: fecha del último commit o versión publicada.
 
-## Mediciones
-
-Todas las herramientas se han probado ejecutando la misma operación:
-
-`go build ./...`
-
-He utilizado `hyperfine` con calentamiento previo y un mínimo de 50 ejecuciones para reducir el efecto de variaciones puntuales.
-
-## Comparación de resultados
-
-Para comparar uno a uno los resultados, he hecho una tabla de manera que me permitiese elegir, basandome en un buen criterio, cuales es el mejor gestor de dependencias para mi proyecto
-
-| Herramienta | Tiempo de `check` | Tamaño ejecutable | Líneas | Tamaño configuración |
-|-------------|------------------:|------------------:|-------:|---------------------:|
-| Make | 15,0 ms ± 1,0 ms | 256 KB | 5 | 39 B |![Medición de Make](img/automatizacion/make.png)
-| Task | 60,0 ms ± 2,4 ms | 50 MB | 7 | 64 B |![Medición de Task 1](img/automatizacion/task1.png)[Medición de Task 2](img/automatizacion/task2.png)
-| Mage | 78,3 ms ± 1,8 ms | 5,8 MB | 16 | 195 B |![Medición de Mage](img/automatizacion/mage.png)
-| Just | 16,8 ms ± 0,9 ms | 6,3 MB | 2 | 26 B |![Medición de Just](img/automatizacion/just.png)
-
-## Elección final
-
-Después de haber hecho las pruebas he elegido GNU Make como herrmienta para automatizar las tareas del proyecto, ya que ha presentado un tiempo de ejecución similar al de ejecutar directamente la operación de Go y su ejecutable ocupa solo 256KB para este caso.
-
-Just también ha tenido un tiempo de ejecución similar y necesita una configuración menor, sin embargo este necesita introducir herramientas adiconales de 6,3 MB para cubrir las mismas necesidades del proyecto (Acutales).
-
-Task y Mage ofrecen funcionaliadesd adicionales que pueden ser útiles en sistemas de automatización mas complejos, pero en las preubas que he realizado, han marcado mas tiempo de ejecución y una configuración superior a la que considero que se necesita par ael proyecto.
-
-Las operaciones que se necesitan automatizar en esta fase son principalmente la instalación de dependencias, la comprobación de los fuentes y la ejecución de test. Esto ha hecho que me haya costado decidirme entre Just y Make, aunque finalmente haya escogido Make ya que permite cubrir estas cosas, sin añadir complejidad.
