@@ -5,7 +5,7 @@ Go incluye su propio gestor de dependencias, los módulos `go mod`, desde la ver
 # Elección del gestor de tareas
 ## Alternativas consideradas
 
-He analizado las siguientes herramientas, que son las que he encontrado que se repetian mas en los foros de reddit:
+He analizado las siguientes herramientas:
 
 - GNU Make: las tareas se definen en el `Makefile`
 - Robo: las tareas se definen en un fichero YAML `robo.yml`
