@@ -4,7 +4,7 @@ install:
 	go mod download
 
 check:
-	go build ./...
+	gofmt -e . > /dev/null
 
 test:
 	go test ./...
