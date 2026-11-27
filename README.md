@@ -31,6 +31,7 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 
 ## Documentación
 - [Configuración del repositorio](docs/configuracion.md)
+- [Elección del gestor de tareas](docs/justificacion-gestor.md)
 
 ## Referencias
 - [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/productosAEMET)
@@ -42,3 +43,30 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 - [Jornadas de usuario](docs/user-journeys.md)
 - [Historias de usuario](docs/historias-usuario.md)
 - [Milestones](docs/milestones.md)
+
+## Automatización de tareas
+
+Las tareas del proyecto se automatizan mediante GNU Make.
+
+### Requisitos previos
+
+- [Go](https://go.dev/dl/) 1.27.2 o superior, que es la versión indicada en `go.mod`.
+- [GNU Make](https://www.gnu.org/software/make/).
+
+Para instalar las dependencias:
+
+```bash
+make install
+```
+
+Para comprobar que los fuentes compilan correctamente:
+
+```bash
+make check
+```
+
+Para ejecutar los tests:
+
+```bash
+make test
+```

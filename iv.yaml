@@ -1,3 +1,6 @@
 lenguaje: go
 entidad: internal/aeroplan/plan_de_vuelo.go
 
+automatizar:
+  fichero: Makefile
+  orden: make
