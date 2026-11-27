@@ -26,60 +26,12 @@ A partir de estos criterios, he elegido herramientas que siguen enfoques distint
 - xc: las tareas se definen en bloques de código dentro de un fichero Markdown.
 - goyek: las tareas se definen como código Go dentro del propio proyecto.
 
-## Resultados
+## Mediciones
 
-### GNU Make
+En todas las herramientas se define una tarea `check` que ejecuta la misma orden:
 
-- Tiempo de `make check`: 14,9 ms ± 0,7 ms, frente a 13,1 ms ± 0,7 ms de `go build ./...` (1,14 ± 0,09 veces más lento, 1,8 ms de sobrecarga).
-- Tamaño instalado: 292 KB.
-- Software adicional: ninguno, ya estaba instalado en el sistema.
-- Dependencias que añade al proyecto: ninguna.
-- Líneas para definir `check`: 2.
-- Mantenimiento: la última versión es la 4.4.1, publicada el 26 de febrero de 2023 ([GNU Make](https://www.gnu.org/software/make/)).
+`gofmt -e . > /dev/null`
 
-![Medición de GNU Make](../img/automatizacion/make.png)
+`gofmt -e` analiza la sintaxis de todos los ficheros `.go` del proyecto sin compilarlos, y termina con error si encuentra alguno. Su salida normal (el código formateado) se descarta, porque solo interesa saber si hay errores de sintaxis.
 
-### Robo
-
-- Tiempo de `robo check`: 17,0 ms ± 0,9 ms, frente a 13,8 ms ± 0,6 ms de `go build ./...` (1,23 ± 0,09 veces más lento, 3,2 ms de sobrecarga).
-- Tamaño instalado: 5,0 MB.
-- Software adicional: el binario de Robo, que hay que instalar aparte.
-- Dependencias que añade al proyecto: ninguna.
-- Líneas para definir `check`: 3.
-- Mantenimiento: el último commit y la última versión (v0.8.0) son del 19 de octubre de 2022, y no ha tenido cambios desde entonces ([repositorio](https://github.com/tj/robo)).
-
-![Medición de Robo](../img/automatizacion/robo.png)
-
-### xc
-
-- Tiempo de `xc check`: 16,4 ms ± 0,7 ms, frente a 13,3 ms ± 0,8 ms de `go build ./...` (1,23 ± 0,09 veces más lento, 3,1 ms de sobrecarga).
-- Tamaño instalado: 7,2 MB.
-- Software adicional: el binario de xc, que hay que instalar aparte.
-- Dependencias que añade al proyecto: ninguna, aunque las tareas tienen que escribirse dentro del `README.md`.
-- Líneas para definir `check`: 6.
-- Mantenimiento: la última versión es la v0.9.0, del 5 de enero de 2026, y el último commit es del 18 de septiembre de 2026 ([repositorio](https://github.com/joerdav/xc)).
-
-![Medición de xc](../img/automatizacion/xc.png)
-
-### goyek
-
-- Tiempo de `go run ./build check`: 201,8 ms ± 9,6 ms, frente a 151,0 ms ± 3,6 ms de `go build ./...` (1,34 ± 0,07 veces más lento, 50,8 ms de sobrecarga).
-- En esta medición `go build ./...` tarda más que en las demás porque el código de las tareas (`build/`) forma parte del proyecto y también se compila.
-- Tamaño del módulo descargado: 608 KB.
-- Software adicional: ninguno aparte de Go.
-- Dependencias que añade al proyecto: `github.com/goyek/goyek/v3 v3.0.1` en el `go.mod`.
-- Líneas para definir `check`: 21.
-- Mantenimiento: la última versión es la v3.0.1, del 9 de diciembre de 2025, y el último commit es del 9 de septiembre de 2026 ([repositorio](https://github.com/goyek/goyek)).
-
-![Medición de goyek](../img/automatizacion/goyek.png)
-
-## Elección final
-
-Después de realizar todas las mediciones, he elegido GNU Make como gestor de tareas para AeroPlan:
-
-- Es la herramienta que menos sobrecarga añade a `go build ./...`: 1,8 ms, frente a unos 3 ms de Robo y xc  y unos 50 ms de goyek. La diferencia con Robo y xc es pequeña, pero en todas las mediciones Make ha sido la más rápida.
-- Es la que menos ocupa 292 KB, frente a los 5,0 MB de Robo y los 7,2 MB de xc.
-- No hay que instalar software adicional ni añade dependencias al proyecto. Robo y xc necesitan instalar cosas adicionales, y goyek añade una dependencia al `go.mod` y código que se compila junto con el resto del proyecto.
-- La tarea `check` se define en solo 2 líneas.
-
-En cuanto al mantenimiento, xc y goyek tienen versiones más recientes que Make, cuya última versión es de febrero de 2023, así que en este criterio Make no es la mejor opción. En cambio, Robo no tiene cambios desde octubre de 2022, por lo que usarlo aumentaría la deuda técnica del proyecto. Teniendo en cuenta el resto de criterios, Make es la opción más adecuada bajo mi consideración.
+El tiempo se mide con `hyperfine`, con 5 ejecuciones de calentamiento y 50 ejecuciones, comparando cada herramienta con la ejecución directa de la orden para ver la sobrecarga que añade. El tamaño se mide con `du` y el mantenimiento con la fecha del último commit o versión publicada. Las pruebas se hacen en una copia del repositorio, para no añadir al proyecto ficheros de herramientas que no se van a usar.
