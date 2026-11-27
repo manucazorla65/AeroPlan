@@ -82,3 +82,14 @@ El tiempo se mide con `hyperfine`, con 5 ejecuciones de calentamiento y 50 ejecu
 - Mantenimiento: la última versión es la v3.0.1, del 9 de diciembre de 2025, y el último commit es del 9 de septiembre de 2026 ([repositorio](https://github.com/goyek/goyek)).
 
 ![Medición de goyek](../img/automatizacion/goyek.png)
+
+## Elección final
+
+Después de realizar todas las mediciones, he elegido GNU Make como gestor de tareas para AeroPlan:
+
+- Es la herramienta que menos sobrecarga añade a `go build ./...`: 1,8 ms, frente a unos 3 ms de Robo y xc  y unos 50 ms de goyek. La diferencia con Robo y xc es pequeña, pero en todas las mediciones Make ha sido la más rápida.
+- Es la que menos ocupa 292 KB, frente a los 5,0 MB de Robo y los 7,2 MB de xc.
+- No hay que instalar software adicional ni añade dependencias al proyecto. Robo y xc necesitan instalar cosas adicionales, y goyek añade una dependencia al `go.mod` y código que se compila junto con el resto del proyecto.
+- La tarea `check` se define en solo 2 líneas.
+
+En cuanto al mantenimiento, xc y goyek tienen versiones más recientes que Make, cuya última versión es de febrero de 2023, así que en este criterio Make no es la mejor opción. En cambio, Robo no tiene cambios desde octubre de 2022, por lo que usarlo aumentaría la deuda técnica del proyecto. Teniendo en cuenta el resto de criterios, Make es la opción más adecuada bajo mi consideración.
